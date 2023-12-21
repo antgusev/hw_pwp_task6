@@ -1,0 +1,21 @@
+import requests
+
+
+class YaCreate:
+    def __init__(self, token: str):
+        self.token = token
+
+    def create_folder(self):
+        url = 'https://cloud-api.yandex.net/v1/disk/resources'
+        params = {"path": "Тест_новая_папка"}
+        headers = {"Authorization": token}
+        
+        resp = requests.put(url, headers=headers, params=params)
+        # print(resp)
+        return resp
+
+
+if __name__ == '__main__':
+    token = 'y0_AgAAAAAAZsLXAADLWwAAAADn2ErPCGUZHUd8TTWjtY6BM1DC01QPFeI'
+    creater = YaCreate(token)
+    result = creater.create_folder()
