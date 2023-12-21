@@ -12,6 +12,7 @@ class YaCreate:
         
         response = requests.put(url, headers=headers, params=params)
         print(response)
+        return response
 
 
 if __name__ == '__main__':

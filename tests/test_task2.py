@@ -1,16 +1,16 @@
 from unittest import TestCase
-from my_yandisk import response
+from myyandisk import *
 
 
 class Test_response(TestCase):
     def test_response_ok(self):
-        res = response
+        res = YaCreate.create_folder(self)
         expected = '<Response [201]>'
         self.assertEqual(res, expected)
         print(f'Код ответа соответствует ', {res})
         
     def test_response_error(self):
-        res = response
+        res = YaCreate.create_folder(self)
         expected = '<Response [409]>'
         self.assertEqual(res, expected)
         print(f'Код ответа соответствует ', {res})
