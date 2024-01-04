@@ -16,6 +16,6 @@ class YaCreate:
 
 
 if __name__ == '__main__':
-    token = ''
+    token = 'y0_AgAAAAAAZsLXAADLWwAAAADn2ErPCGUZHUd8TTWjtY6BM1DC01QPFeI'
     creater = YaCreate(token)
     result = creater.create_folder()
