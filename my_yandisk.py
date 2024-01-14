@@ -10,9 +10,9 @@ class YaCreate:
         params = {"path": "Тест_новая_папка"}
         headers = {"Authorization": token}
         
-        resp = requests.put(url, headers=headers, params=params)
-        # print(resp)
-        return resp
+        response = requests.put(url, headers=headers, params=params)
+        print(response)
+        return response
 
 
 if __name__ == '__main__':
